@@ -1,10 +1,11 @@
-# About
+# Shear Sonic Log Prediction Using Machine Learning
+## About
 This project was done as a part of the [SPE Machine Learning Challenge](https://www.spegcs.org/events/5965/) conducted by the SPE Gulf Coast Section in February 2021. This code has won the ***First prize*** in the **Metrics Driven** award and also the **Innovative Approach** award. As part of the agreement, the data provided to us during the competition cannot be shared. This code is also hosted by [SPEGCS repository](https://github.com/SPEGCS/ML-Challenge-Feb-March-2021).
 
-# Problem Statement
+## Problem Statement
 Typically, shear sonic travel time (DTS) in conjunction with compressional sonic travel time (DTS) and bulk density are the key factors used in estimating rock mechanical properties. These estimates of rock mechanical properties provide us with valuable insights on subsurface characterization. DTS logs are often missing from the log suite due to their financial or operational constraints. The goal of the “SPE Machine Learning Challenge” is to develop data-driven models by processing “easy-to-acquire” conventional logs, use the data-driven models to generate synthetic DTS logs. **THE DATASET IS NOT RELEASED FOR USE OUTSIDE THE COMPETIOTION**.
 
-# EDA and Feature Selection
+## EDA and Feature Selection
 Input dataset consists of well logs (.las files) from 234 wells. [Lasio](https://pypi.org/project/lasio/) was used to read the .lasfile and individual dataframes were created for each well.  Each well consisted of different number of logs varying from 5 to 40. The histogram below shows the distribution of number of logs.
 
 ![image](https://user-images.githubusercontent.com/69025410/113067965-f5c47100-9182-11eb-83a5-9e0e428b23c2.png)
@@ -46,12 +47,12 @@ A simple representation of the ML pipeline used for this analysis.
 
 ![image](https://user-images.githubusercontent.com/69025410/113071987-81da9680-918b-11eb-9254-2b7ebafff097.png)
 
-# Model Selection
+## Model Selection
 Based on the cross-validation scores in conjunction with training time of different ML algorithms, I selected the top two Algorithms as XGBoost and LightGBM and submitted the results for the preliminary leaderboard. Both of these models are tree-style gradient boosting models, Light GBM has very fast training time whereas XGBoost is has higher accuracy. This was confirmed based on the error scores on the leaderboard 2, Light GBM had an error score of 29.66 where as XGboost had 29.49. So, **XGBoost** will be used for ***hyperparameter tuning*** and ***final predictions***.
 
 ![image](https://user-images.githubusercontent.com/69025410/113072023-9880ed80-918b-11eb-8acc-d803e36073f6.png)
 
-# Predictions for Blind Test Set
+## Predictions for Blind Test Set
 The blind test data set consisted of 10 wells. These test wells are spatially distributed within the train dataset space as seen below.
 
 ![image](https://user-images.githubusercontent.com/69025410/113072329-6a4fdd80-918c-11eb-8954-d3abbad09d9f.png)
