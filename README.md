@@ -1,4 +1,4 @@
-# Shear Sonic Log Prediction Using Machine Learning
+# Shear Sonic Log Prediction Using XGBoost
 ## About
 This project was done as a part of the [SPE Machine Learning Challenge](https://www.spegcs.org/events/5965/) conducted by the SPE Gulf Coast Section in February 2021. This code has won the ***First prize*** in the **Metrics Driven** award and also the **Innovative Approach** award. As part of the agreement, the data provided to us during the competition cannot be shared. This code is also hosted by [SPEGCS repository](https://github.com/SPEGCS/ML-Challenge-Feb-March-2021).
 
